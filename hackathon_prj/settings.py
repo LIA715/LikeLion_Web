@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-a!xp2w8@6b$ztoa8w$s737%8a+o1pt$j5*lknc@=t1@+=&7s_s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -45,11 +45,11 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
-    "rest_framework",
-    "corsheaders",
+    "crispy_bootstrap4",
+    "crispy_forms",
 ]
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -147,3 +147,5 @@ SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

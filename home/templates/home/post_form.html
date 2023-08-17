@@ -1,6 +1,8 @@
 <!D0CTYPE html>
 {% load static %}
 {% load socialaccount %}
+{% load crispy_forms_tags %}
+
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -10,31 +12,21 @@
 <div class="container">
 
 <body>
+    <!-- 네비게이션바 -->
  <nav class="navbar navbar-expand-lg bg-light">
 
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">I C</a>
+    <a class="navbar-brand" href="/">Digital Bridge</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/about_me/">강의</a>
+          <a class="nav-link active" aria-current="page" href="/class/">강의</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">소통공간</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            커뮤니티
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">수업 후기</a></li>
-            <li><a class="dropdown-item" href="#">선생님 후기</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/about_me/">자유 게시판</a></li>
-          </ul>
+          <a class="nav-link" href="/home">게시판</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -48,9 +40,11 @@
           </ul>
         </li>
        {% else %}
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인&회원가입
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  로그인&회원가입
 </button>
-  {%  endif %}</ul>
+  {%  endif %}
+      </ul>
 
                <!-- 네비게이션바 -->
 <!-- Modal -->
@@ -85,9 +79,12 @@
 <h1> 포스트 작성하기 </h1>
  <hr/>
  <form method="post" enctype="multipart/form-data">{% csrf_token %}
-    <table>
-      {{ form }}
-    </table>
+      {{ form | crispy }}
+      <div id="div_id_tags_str">
+          <label for="id_tags_str"></label>
+          <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+      </div>
+ </br>
     <button type="submit" class="btn btn-primary float-xl-end">작성 완료하기</button>
  </form>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
