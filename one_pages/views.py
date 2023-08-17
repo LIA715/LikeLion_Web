@@ -10,4 +10,22 @@ def about_me(request):
         request,
         'one_pages/class.html'
     )
+
+def naver(request):
+    return render(
+        request,
+        'one_pages/naverclass.html'
+    )
+
+def youtube(request):
+    return render(
+        request,
+        'one_pages/youtube.html'
+    )
+
+def korea(request):
+    return render(
+        request,
+        'one_pages/24class.html'
+    )
 # Create your views here.
