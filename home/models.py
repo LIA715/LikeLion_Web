@@ -6,7 +6,6 @@ class Post(models.Model): #메인화면 포스트 모델
     content = models.TextField() #내용
     created_at = models.DateTimeField(auto_now_add=True) #작성일
     updated_at = models.DateTimeField(auto_now=True)
-
     author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
     def __str__(self): #포스트 제목, 번호 보여주기

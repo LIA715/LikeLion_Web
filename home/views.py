@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from rest_framework import generics
+
 from .models import Post
+from .serializers import PostSerializer
 
 class PostList(ListView):
     model = Post
@@ -45,3 +48,13 @@ def single_post_page(request, pk):
         }
     )
 # Create your views here.
+
+from .serializers import PostSerializer
+
+class ListPost(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class DetailPost(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
