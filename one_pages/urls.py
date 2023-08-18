@@ -8,4 +8,5 @@ urlpatterns = [
     path('youtube/',views.youtube),
     path('24class/',views.korea),
     path('about/',views.about),
+    # path('',views.base),
 ]

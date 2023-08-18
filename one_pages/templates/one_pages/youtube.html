@@ -1,4 +1,5 @@
 <!-- 메인화면 페이지 -->
+
 <!D0CTYPE html>
 {% load static %}
 {% load socialaccount %}
@@ -12,50 +13,7 @@
 <div class="container">
 
 <body>
-    <!-- 네비게이션바 -->
- <nav class="navbar navbar-expand-lg bg-light">
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@800&display=swap" rel="stylesheet">
-    <style> *{ font-family: 'Noto Sans KR', sans-serif; }</style>
-<div class="container">
 
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Digital Bridge</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/class/">강의</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/home">게시판</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">소개</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-          {% if user.is_authenticated %}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ user.username }}
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/accounts/logout/">Log out</a></li>
-          </ul>
-        </li>
-       {% else %}
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  로그인&회원가입
-</button>
-  {%  endif %}
-      </ul>
-
-               <!-- 네비게이션바 -->
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
