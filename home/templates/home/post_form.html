@@ -28,6 +28,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/home">게시판</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">소개</a>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
@@ -80,7 +83,7 @@
     </div>
   </div>
 </nav>
- <!-- Modal -->>
+ <!-- Modal -->
 <h1> 포스트 작성하기 </h1>
  <hr/>
  <form method="post" enctype="multipart/form-data">{% csrf_token %}

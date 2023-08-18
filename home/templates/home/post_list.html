@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>post_list</title>
+    <title>Digital Bridge</title>
     <link rel="stylesheet" href="{% static 'home/bootstrap/bootstrap.min.css' %}" media="screen">
 </head>
 <div class="container">
@@ -30,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/home">게시판</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">소개</a>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
@@ -47,7 +50,6 @@
 </button>
   {%  endif %}
       </ul>
-
                <!-- 네비게이션바 -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
