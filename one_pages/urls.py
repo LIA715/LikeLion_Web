@@ -7,6 +7,5 @@ urlpatterns = [
     path('naverclass/',views.naver),
     path('youtube/',views.youtube),
     path('24class/',views.korea),
-
-
+    path('about/',views.about),
 ]

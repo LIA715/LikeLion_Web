@@ -28,4 +28,10 @@ def korea(request):
         request,
         'one_pages/24class.html'
     )
+
+def about(request):
+    return render(
+        request,
+        'one_pages/about.html'
+    )
 # Create your views here.
