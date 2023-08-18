@@ -35,4 +35,16 @@ def about(request):
         request,
         'one_pages/about.html'
     )
+
+def classdetail1(request):
+    return render(
+        request,
+        'one_pages/classdetail1.html'
+    )
+
+def classdetail2(request):
+    return render(
+        request,
+        'one_pages/classdetail2.html'
+    )
 # Create your views here.

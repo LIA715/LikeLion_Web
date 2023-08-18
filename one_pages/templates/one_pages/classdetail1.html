@@ -1,0 +1,31 @@
+<!-- 메인화면 페이지 -->
+{% extends 'one_pages/base.html' %}
+<!D0CTYPE html>
+{% load static %}
+{% load socialaccount %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>대문</title>
+    <link rel="stylesheet" href="{% static 'one_pages/bootstrap/bootstrap.min.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/7c6eec18eb.js" crossorigin="anonymous"></script>
+</head>
+<div class="container">
+
+<body>
+{% block content %}
+
+<!-- Modal -->
+    <!-- 본문 -->
+    <div class="container"><tr><td><video id="myVideo" src="{% static 'IMG/지자체.mp4' %}" controls autoplay></video></td></td>
+</tr><tr><iframe width="1400" height="500" src="https://www.gov.kr/portal/main/nologin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></tr></div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+</div>
+{% endblock %}
+</html>

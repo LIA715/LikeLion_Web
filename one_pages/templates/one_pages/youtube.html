@@ -1,5 +1,5 @@
 <!-- 메인화면 페이지 -->
-
+{% extends 'one_pages/base.html' %}
 <!D0CTYPE html>
 {% load static %}
 {% load socialaccount %}
@@ -13,6 +13,7 @@
 <div class="container">
 
 <body>
+{% block content %}
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -38,7 +39,7 @@
     </div>
   </div>
 </div>
-    </div>
+    </body>
   </div>
 </nav>
 <!-- Modal -->
@@ -237,7 +238,7 @@
               <p class="card-text">공개 예정인 강의입니다.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="https://www.youtube.com" class="btn btn-sm btn-outline-secondary">시청하기</a>
+                  <a href="" class="btn btn-sm btn-outline-secondary">시청하기</a>
                 </div>
                 <small class="text-body-secondary">2일 전</small>
               </div>
@@ -251,7 +252,7 @@
               <p class="card-text">공개 예정인 강의입니다.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="https://www.youtube.com" class="btn btn-sm btn-outline-secondary">시청하기</a>
+                  <a href="" class="btn btn-sm btn-outline-secondary">시청하기</a>
                 </div>
                 <small class="text-body-secondary">방금 전</small>
             </div>
@@ -260,7 +261,7 @@
       </div>
     </div>
   </div>
-
+  </div>
 </main>
 
 <footer class="text-body-secondary py-5">
@@ -290,4 +291,5 @@
 </body>
     <!-- 본문 -->
 </div>
+{% endblock %}
 </html>

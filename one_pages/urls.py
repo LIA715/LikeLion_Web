@@ -8,5 +8,7 @@ urlpatterns = [
     path('youtube/',views.youtube),
     path('24class/',views.korea),
     path('about/',views.about),
-    # path('',views.base),
+    path('class/classdetail1',views.classdetail1),
+    path('class/classdetail2',views.classdetail2),
+
 ]
